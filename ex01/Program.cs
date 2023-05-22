@@ -31,7 +31,7 @@ void PrintArray(double[,] array) // метод вывода на экран вы
         for (int j = 0; j < array.GetLength(1); j++)
         {
             string value = array[i,j].ToString();
-            Console.Write("{0,-6}", value.PadLeft(4));
+            Console.Write(value.PadLeft(6));
         }
         Console.WriteLine();
     }
