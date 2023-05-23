@@ -4,8 +4,17 @@
 int Parametr(string message)
 {
     Console.Write(message);
-    int value= int.Parse(Console.ReadLine()!);
-    return value;
+    string value = Console.ReadLine()!;
+    if (int.TryParse(value, out int val))
+    {
+        return val;
+    }
+    else
+    {
+        Console.WriteLine("Пустые строки и символы отличные от цифр вводить нельзя!");
+        val = Parametr("Введите значение еще раз:");
+        return val;
+    }
 }
 double[,] CreateArray()
 {
